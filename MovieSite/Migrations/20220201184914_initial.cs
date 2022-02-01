@@ -12,6 +12,7 @@ namespace MovieSite.Migrations
                 {
                     MovieId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Category = table.Column<string>(nullable: false),
                     Title = table.Column<string>(nullable: false),
                     Year = table.Column<int>(nullable: false),
                     Director = table.Column<string>(nullable: false),
@@ -27,18 +28,18 @@ namespace MovieSite.Migrations
 
             migrationBuilder.InsertData(
                 table: "Responses",
-                columns: new[] { "MovieId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
-                values: new object[] { 1, "Shawn Levy", false, null, "Ryan Reynolds is the best ever...", "PG", "Free Guy", 2021 });
+                columns: new[] { "MovieId", "Category", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
+                values: new object[] { 1, "Action/Adventure", "Shawn Levy", false, null, "Ryan Reynolds is the best ever...", "PG", "Free Guy", 2021 });
 
             migrationBuilder.InsertData(
                 table: "Responses",
-                columns: new[] { "MovieId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
-                values: new object[] { 2, "Taika Waititi", false, null, "Powerful", "PG-13", "JoJo Rabbit", 2019 });
+                columns: new[] { "MovieId", "Category", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
+                values: new object[] { 2, "Drama/Comedy", "Taika Waititi", false, null, "Powerful", "PG-13", "JoJo Rabbit", 2019 });
 
             migrationBuilder.InsertData(
                 table: "Responses",
-                columns: new[] { "MovieId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
-                values: new object[] { 3, "Jared Hess", false, null, "Hilarious", "PG", "Napoleon Dynamite", 2004 });
+                columns: new[] { "MovieId", "Category", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
+                values: new object[] { 3, "Comedy", "Jared Hess", false, null, "Hilarious", "PG", "Napoleon Dynamite", 2004 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -21,6 +21,10 @@ namespace MovieSite.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Director")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -54,6 +58,7 @@ namespace MovieSite.Migrations
                         new
                         {
                             MovieId = 1,
+                            Category = "Action/Adventure",
                             Director = "Shawn Levy",
                             Edited = false,
                             Notes = "Ryan Reynolds is the best ever...",
@@ -64,6 +69,7 @@ namespace MovieSite.Migrations
                         new
                         {
                             MovieId = 2,
+                            Category = "Drama/Comedy",
                             Director = "Taika Waititi",
                             Edited = false,
                             Notes = "Powerful",
@@ -74,6 +80,7 @@ namespace MovieSite.Migrations
                         new
                         {
                             MovieId = 3,
+                            Category = "Comedy",
                             Director = "Jared Hess",
                             Edited = false,
                             Notes = "Hilarious",

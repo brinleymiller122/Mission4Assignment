@@ -22,6 +22,7 @@ namespace MovieSite.Models
                 new MovieModel
                 {
                     MovieId = 1,
+                    Category= "Action/Adventure",
                     Title = "Free Guy",
                     Year = 2021,
                     Director = "Shawn Levy",
@@ -32,6 +33,7 @@ namespace MovieSite.Models
                 new MovieModel
                 {
                     MovieId = 2,
+                    Category= "Drama/Comedy",
                     Title = "JoJo Rabbit",
                     Year = 2019,
                     Director = "Taika Waititi",
@@ -41,6 +43,7 @@ namespace MovieSite.Models
                 new MovieModel
                 {
                     MovieId = 3,
+                    Category="Comedy",
                     Title = "Napoleon Dynamite",
                     Year = 2004,
                     Director = "Jared Hess",

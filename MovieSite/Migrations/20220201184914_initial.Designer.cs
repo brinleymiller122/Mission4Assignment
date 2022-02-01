@@ -8,8 +8,8 @@ using MovieSite.Models;
 namespace MovieSite.Migrations
 {
     [DbContext(typeof(MovieFormsContext))]
-    [Migration("20220126220826_initials")]
-    partial class initials
+    [Migration("20220201184914_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,6 +22,10 @@ namespace MovieSite.Migrations
                     b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Director")
                         .IsRequired()
@@ -56,6 +60,7 @@ namespace MovieSite.Migrations
                         new
                         {
                             MovieId = 1,
+                            Category = "Action/Adventure",
                             Director = "Shawn Levy",
                             Edited = false,
                             Notes = "Ryan Reynolds is the best ever...",
@@ -66,6 +71,7 @@ namespace MovieSite.Migrations
                         new
                         {
                             MovieId = 2,
+                            Category = "Drama/Comedy",
                             Director = "Taika Waititi",
                             Edited = false,
                             Notes = "Powerful",
@@ -76,6 +82,7 @@ namespace MovieSite.Migrations
                         new
                         {
                             MovieId = 3,
+                            Category = "Comedy",
                             Director = "Jared Hess",
                             Edited = false,
                             Notes = "Hilarious",
